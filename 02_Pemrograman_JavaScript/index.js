@@ -1,9 +1,9 @@
-const arr1 = [1, -2, 3, -4, 5, -6];
+const arr1 = [2, 0, 26, 28, -2]; // Di soal minta diubah jadi itu
 
-function mulOfArray(arr) {
-    let result = 1;
-    for (let i = 0; i < arr.length; i = i + 1) {
-       if (arr[i] >= 0) {
+function mulOfArray(arr) { 
+    let result = 1; //nilai awal resultnya = 1 karena ini tuh operasi perkalian
+    for (let i = 0; i < arr.length; i++) { // >= 0 diubah jadi > 0 karena 0 itu bukan bilangan positif, nah kalp pake >= 0 itu 0 nya ikut dikaliin nanti hasilnya jadi 0
+       if (arr[i] > 0) {
            result = result * arr[i];
        }
     }
@@ -11,6 +11,4 @@ function mulOfArray(arr) {
     return result;
 }
 
-// Panggil fungsinya
-const arr1Result = mulOfArray(arr1);
-console.log(arr1Result);
+console.log(mulOfArray(arr1));
